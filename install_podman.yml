@@ -1,0 +1,8 @@
+- name: Install Podman on Red Hat nodes
+  hosts: agents
+  become: yes
+  tasks:
+    - name: Ensure Podman is installed
+      yum:
+       name: podman
+       state: present
